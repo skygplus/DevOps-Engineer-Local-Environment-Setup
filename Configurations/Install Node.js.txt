@@ -1,0 +1,24 @@
+johns@LAPTOP-6K1PGFL:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+100  16631 100  16631   0      0 103.8k      0                              0
+=> Downloading nvm from git to '/home/johns/.nvm'
+=> Cloning into '/home/johns/.nvm'...
+remote: Enumerating objects: 469, done.
+remote: Counting objects: 100% (469/469), done.
+remote: Compressing objects: 100% (391/391), done.
+remote: Total 469 (delta 68), reused 233 (delta 51), pack-reused 0 (from 0)
+Receiving objects: 100% (469/469), 481.14 KiB | 4.63 MiB/s, done.
+Resolving deltas: 100% (68/68), done.
+* (HEAD detached at FETCH_HEAD)
+  master
+=> Compressing and cleaning up git repository
+
+=> Appending nvm source string to /home/johns/.bashrc
+=> Appending bash_completion source string to /home/johns/.bashrc
+=> Close and reopen your terminal to start using nvm or run the following to use it now:
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+johns@LAPTOP-6K1PGFL:~$

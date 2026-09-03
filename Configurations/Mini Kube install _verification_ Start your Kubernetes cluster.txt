@@ -1,0 +1,114 @@
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+100 39.45M 100 39.45M   0      0  7.51M      0   00:05   00:05          7.49M
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ sudo dpkg -i minikube_latest_amd64.deb
+Selecting previously unselected package minikube.
+(Reading database ... 40708 files and directories currently installed.)
+Preparing to unpack minikube_latest_amd64.deb ...
+Unpacking minikube (1.39.0-0) ...
+Setting up minikube (1.39.0-0) ...
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ minikube version
+minikube version: v1.39.0
+commit: 7a9f6a841470a207de8cf4bafcccee0969d8ba10
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ minikube start --driver=docker
+😄  minikube v1.39.0 on Ubuntu 26.04 (kvm/amd64)
+✨  Using the docker driver based on user configuration
+
+💣  Exiting due to PROVIDER_DOCKER_NEWGRP: "docker version --format <no value>-<no value>:<no value>" exit status 1: permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+💡  Suggestion: Add your user to the 'docker' group: 'sudo usermod -aG docker $USER && newgrp docker'
+📘  Documentation: https://docs.docker.com/engine/install/linux-postinstall/
+
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ sudo usermod -aG docker $USER && newgrp docker
+Command 'newgrp' not found, but can be installed with:
+sudo apt install util-linux-extra
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ sudo apt install util-linux-extra
+The following packages were automatically installed and are no longer required:
+  alacritty           cpp-15                   libasound2-data        libfile-desktopentry-perl  libipc-system-simple-perl  libnss3      libx11-protocol-perl  libxft2             libxpm4       luit               xdg-utils
+  alsa-topology-conf  cpp-15-x86-64-linux-gnu  libasound2t64          libfile-mimeinfo-perl      libisl23                   libsm6       libxaw7               libxkbcommon-x11-0  libxt6t64     socat
+  alsa-ucm-conf       cpp-x86-64-linux-gnu     libencode-locale-perl  libice6                    libmpc3                    liburi-perl  libxcb-shape0         libxkbfile1         libxv1        x11-utils
+  cpp                 gcc-15-base              libfile-basedir-perl   libio-stringy-perl         libnspr4                   libwrap0     libxcb-xkb1           libxmu6             libxxf86dga1  x11-xserver-utils
+Use 'sudo apt autoremove' to remove them.
+
+Installing:
+  util-linux-extra
+
+Installing dependencies:
+  liblastlog2-2
+
+Summary:
+  Upgrading: 0, Installing: 2, Removing: 0, Not Upgrading: 0
+  Download size: 374 kB
+  Space needed: 1407 kB / 1023 GB available
+
+Continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 liblastlog2-2 amd64 2.41.3-3ubuntu2.2 [27.4 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 util-linux-extra amd64 2.41.3-3ubuntu2.2 [347 kB]
+Fetched 374 kB in 0s (2006 kB/s)
+Selecting previously unselected package liblastlog2-2:amd64.
+(Reading database ... 40709 files and directories currently installed.)
+Preparing to unpack .../liblastlog2-2_2.41.3-3ubuntu2.2_amd64.deb ...
+Unpacking liblastlog2-2:amd64 (2.41.3-3ubuntu2.2) ...
+Selecting previously unselected package util-linux-extra.
+Preparing to unpack .../util-linux-extra_2.41.3-3ubuntu2.2_amd64.deb ...
+Unpacking util-linux-extra (2.41.3-3ubuntu2.2) ...
+Setting up liblastlog2-2:amd64 (2.41.3-3ubuntu2.2) ...
+Setting up util-linux-extra (2.41.3-3ubuntu2.2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ sudo usermod -aG docker $USER && newgrp docker
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ minikube start --driver=docker
+😄  minikube v1.39.0 on Ubuntu 26.04 (kvm/amd64)
+✨  Using the docker driver based on user configuration
+
+🧯  The requested memory allocation of 3072MiB does not leave room for system overhead (total system memory: 3797MiB). You may face stability issues.
+💡  Suggestion: Start minikube with less memory allocated: 'minikube start --memory=3072mb'
+
+📌  Using Docker driver with root privileges
+❗  For an improved experience it's recommended to use Docker Engine instead of Docker Desktop.
+Docker Engine installation instructions: https://docs.docker.com/engine/install/#server
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.51 ...
+💾  Downloading Kubernetes v1.37.0 preload ...
+    > gcr.io/k8s-minikube/kicbase:  54.22 MiB / 507.61 MiB  10.68% 3.04 MiB p/s
+    > gcr.io/k8s-minikube/kicbase:  161.13 MiB / 507.61 MiB  31.74% 4.24 MiB p/
+    > preloaded-images-k8s-v18-v1...:  347.59 MiB / 347.59 MiB  100.00% 4.37 Mi
+    > gcr.io/k8s-minikube/kicbase:  507.61 MiB / 507.61 MiB  100.00% 4.94 MiB p
+
+
+
+
+
+🔥  Creating docker container (CPUs=2, Memory=3072MB) .../
+🔥  Creating docker container (CPUs=2, Memory=3072MB) ...\
+🔥  Creating docker container (CPUs=2, Memory=3072MB) ...
+📦  Preparing Kubernetes v1.37.0 on containerd 2.3.4 ...
+
+🔗  Configuring CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+E0902 23:29:24.520313   27821 start.go:158] Unable to scale down deployment "coredns" in namespace "kube-system" to 1 replica: non-retryable failure while rescaling coredns deployment: Operation cannot be fulfilled on deployments.apps "coredns": the object has been modified; please apply your changes to the latest version and try again
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ minikube status
+kubectl get nodes
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   61s   v1.37.0
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$

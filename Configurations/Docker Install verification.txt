@@ -1,0 +1,17 @@
+johns@LAPTOP-6K1PGFL:~$ docker --version
+Docker version 29.7.2, build a7dcaa6
+johns@LAPTOP-6K1PGFL:~$ docker compose version
+Docker Compose version v5.5.0
+johns@LAPTOP-6K1PGFL:~$ docker run hello-world
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+johns@LAPTOP-6K1PGFL:~$ mkdir ~/devops-lab/docker-test
+cd ~/devops-lab/docker-test
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ nano compose.yaml
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ docker compose up -d
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ docker ps
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$ curl http://localhost:8080
+curl: (7) Failed to connect to localhost port 8080 after 7 ms: Could not connect to server
+johns@LAPTOP-6K1PGFL:~/devops-lab/docker-test$
+

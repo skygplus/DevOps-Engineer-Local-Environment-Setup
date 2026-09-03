@@ -1,0 +1,24 @@
+===== MINIKUBE STATUS =====
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+
+===== KUBERNETES NODES =====
+NAME       STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION                              CONTAINER-RUNTIME
+minikube   Ready    control-plane   72m   v1.37.0   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.18.33.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.4
+
+===== KUBERNETES PODS =====
+NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
+kube-system   coredns-559f6c778d-97hnb           1/1     Running   0          72m
+kube-system   coredns-559f6c778d-g7x5n           1/1     Running   0          72m
+kube-system   etcd-minikube                      1/1     Running   0          72m
+kube-system   kindnet-mnmmb                      1/1     Running   0          72m
+kube-system   kube-apiserver-minikube            1/1     Running   0          72m
+kube-system   kube-controller-manager-minikube   1/1     Running   0          72m
+kube-system   kube-proxy-7fr7j                   1/1     Running   0          72m
+kube-system   kube-scheduler-minikube            1/1     Running   0          72m
+kube-system   storage-provisioner                1/1     Running   0          72m
