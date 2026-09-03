@@ -1,0 +1,86 @@
+PS C:\WINDOWS\system32> bash
+johns@LAPTOP-6K1PGFL:/mnt/c/WINDOWS/system32$ cd ~
+johns@LAPTOP-6K1PGFL:~$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+[sudo: authenticate] Password:
+Get:1 https://packages.microsoft.com/repos/code stable InRelease [3590 B]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Get:6 https://packages.microsoft.com/repos/code stable/main amd64 Packages [29.6 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [46.6 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.1 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [570 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [137 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [98.2 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [266 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [87.4 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [188 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [1056 B]
+Fetched 1882 kB in 3s (629 kB/s)
+
+
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+apt-transport-https is already the newest version (3.2.0).
+ca-certificates is already the newest version (20260601~26.04.1).
+curl is already the newest version (8.18.0-1ubuntu2.4).
+gnupg is already the newest version (2.4.8-4ubuntu3).
+lsb-release is already the newest version (12.1-2build1).
+Solving dependencies... Done
+The following packages were automatically installed and are no longer required:
+  alacritty alsa-topology-conf alsa-ucm-conf cpp cpp-15 cpp-15-x86-64-linux-gnu cpp-x86-64-linux-gnu gcc-15-base
+  libasound2-data libasound2t64 libencode-locale-perl libfile-basedir-perl libfile-desktopentry-perl
+  libfile-mimeinfo-perl libice6 libio-stringy-perl libipc-system-simple-perl libisl23 libmpc3 libnspr4 libnss3 libsm6
+  liburi-perl libwrap0 libx11-protocol-perl libxaw7 libxcb-shape0 libxcb-xkb1 libxft2 libxkbcommon-x11-0 libxkbfile1
+  libxmu6 libxpm4 libxt6t64 libxv1 libxxf86dga1 luit socat x11-utils x11-xserver-utils xdg-utils
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Types: deb
+URIs: https://packages.microsoft.com/repos/azure-cli/
+Suites: resolute
+Components: main
+Architectures: amd64
+Signed-by: /etc/apt/keyrings/microsoft.gpg
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://packages.microsoft.com/repos/azure-cli resolute InRelease [3576 B]
+Hit:6 https://packages.microsoft.com/repos/code stable InRelease
+Get:7 https://packages.microsoft.com/repos/azure-cli resolute/main amd64 Packages [475 B]
+Fetched 4051 B in 1s (3098 B/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Solving dependencies... Done
+The following packages were automatically installed and are no longer required:
+  alacritty alsa-topology-conf alsa-ucm-conf cpp cpp-15 cpp-15-x86-64-linux-gnu cpp-x86-64-linux-gnu gcc-15-base
+  libasound2-data libasound2t64 libencode-locale-perl libfile-basedir-perl libfile-desktopentry-perl
+  libfile-mimeinfo-perl libice6 libio-stringy-perl libipc-system-simple-perl libisl23 libmpc3 libnspr4 libnss3 libsm6
+  liburi-perl libwrap0 libx11-protocol-perl libxaw7 libxcb-shape0 libxcb-xkb1 libxft2 libxkbcommon-x11-0 libxkbfile1
+  libxmu6 libxpm4 libxt6t64 libxv1 libxxf86dga1 luit socat x11-utils x11-xserver-utils xdg-utils
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  azure-cli
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 56.8 MB of archives.
+After this operation, 604 MB of additional disk space will be used.
+Get:1 https://packages.microsoft.com/repos/azure-cli resolute/main amd64 azure-cli amd64 2.90.0-1~resolute [56.8 MB]
+Fetched 56.8 MB in 6s (8922 kB/s)
+Selecting previously unselected package azure-cli.
+(Reading database ... 40823 files and directories currently installed.)
+Preparing to unpack .../azure-cli_2.90.0-1~resolute_amd64.deb ...
+Unpacking azure-cli (2.90.0-1~resolute) ...
+Setting up azure-cli (2.90.0-1~resolute) ...
+johns@LAPTOP-6K1PGFL:~$ az version
+{
+  "azure-cli": "2.90.0",
+  "azure-cli-core": "2.90.0",
+  "azure-cli-telemetry": "1.1.0",
+  "extensions": {}
+}
+johns@LAPTOP-6K1PGFL:~$

@@ -1,0 +1,19 @@
+
+Steps 1
+
+Docker Desktop
+        ↓
+Settings
+        ↓
+Resources
+        ↓
+WSL Integration
+
+
+
+Step 2
+Enable integration with my default WSL distro
+
+Step 3
+
+Ubuntu

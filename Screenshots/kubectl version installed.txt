@@ -1,0 +1,4 @@
+johns@LAPTOP-6K1PGFL:~/devops-lab$ kubectl version --client
+Client Version: v1.37.0
+Kustomize Version: v5.8.1
+johns@LAPTOP-6K1PGFL:~/devops-lab$

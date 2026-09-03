@@ -1,0 +1,7 @@
+johns@LAPTOP-6K1PGFL:~/devops-lab$ code --version
+1.135.0
+08d4889f9ec4a1685d257b9b95de036c8e1ce1e5
+x64
+johns@LAPTOP-6K1PGFL:~/devops-lab$
+
+

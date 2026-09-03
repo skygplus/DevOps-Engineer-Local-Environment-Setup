@@ -1,0 +1,3 @@
+ johns@LAPTOP-6K1PGFL:~/devops-lab$ docker --version
+Docker version 29.7.2, build a7dcaa6
+johns@LAPTOP-6K1PGFL:~/devops-lab$
