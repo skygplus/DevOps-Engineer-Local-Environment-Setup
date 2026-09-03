@@ -1,4 +1,0 @@
-johns@LAPTOP-6K1PGFL:/mnt/c/WINDOWS/system32$ mkdir -p ~/devops-lab
-cd ~/devops-lab
-johns@LAPTOP-6K1PGFL:~/devops-lab$ code .
-johns@LAPTOP-6K1PGFL:~/devops-lab$
